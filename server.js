@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
   res.send("Recipe Management API is running");
 });
 
-app.use("/api/auth", authroutes);
-app.use("/api/recipes", reciperoutes);
-app.use("/api/external", externalroutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/recipes", recipeRoutes);
+app.use("/api/external", externalRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
